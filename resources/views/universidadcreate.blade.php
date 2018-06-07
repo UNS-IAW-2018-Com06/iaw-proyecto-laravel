@@ -15,47 +15,47 @@
         <div class="container">
         </div>
         <form method="post" id="formEdit" action="{{url('add')}}">
-            @csrf
+            {{csrf_field() }}
             <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
                 <label for="Nombre">Nombre:</label>
-                <input type="text" class="form-control" name="nombre">
+                <input type="text" class="form-control" name="nombre" required>
             </div>
             </div>
             <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
                 <label for="Provincia">Provincia:</label>
-                <input type="text" class="form-control" name="provincia">
+                <input type="text" class="form-control" name="provincia" required>
             </div>
             </div>
             <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
                 <label for="Ciudad">Ciudad:</label>
-                <input type="text" class="form-control" name="ciudad">
+                <input type="text" class="form-control" name="ciudad" required>
             </div>
             </div>
             <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
                 <label for="Direccion">Direccion:</label>
-                <input type="text" class="form-control" name="direccion">
+                <input type="text" class="form-control" name="direccion" required>
             </div>
             </div>
             <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
                 <label for="Telefono">Telefono:</label>
-                <input type="text" class="form-control" name="telefono">
+                <input type="text" class="form-control" name="telefono" required>
             </div>
             </div>
             <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
                 <label for="Web">Web:</label>
-                <input type="text" class="form-control" name="web">
+                <input type="text" class="form-control" name="web" required>
             </div>
             </div>
             <div class="row">

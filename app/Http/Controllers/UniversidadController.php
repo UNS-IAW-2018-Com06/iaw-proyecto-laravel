@@ -14,19 +14,6 @@ class UniversidadController extends Controller{
 
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(),[
-            'nombre' =>'required| max:100',
-            'provincia' =>'required',
-            'ciudad' =>'required',
-            'direccion' =>'required',
-            'telefono' =>'required',
-            'web' =>'required'
-        ]);
-
-        if ($validator -> fails()){
-          
-        }
-
         $universidad = new Universidad();
         $universidad->nombre = $request->get('nombre');
         $universidad->provincia = $request->get('provincia');
@@ -52,19 +39,6 @@ class UniversidadController extends Controller{
 
     public function update(Request $request, $id)
     {
-        $validator = Validator::make($request->all(),[
-            'nombre' =>'required| max:100',
-            'provincia' =>'required',
-            'ciudad' =>'required',
-            'direccion' =>'required',
-            'telefono' =>'required',
-            'web' =>'required'
-        ]);
-
-        if ($validator -> fails()){
-           
-        }
-    
         $universidad= Universidad::find($id);
         $universidad->nombre = $request->get('nombre');
         $universidad->provincia = $request->get('provincia');

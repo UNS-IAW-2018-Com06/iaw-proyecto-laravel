@@ -19,42 +19,42 @@
                 <div class="col-md-4"></div>
                 <div class="form-group col-md-4">
                      <label for="Nombre">Nombre:</label>
-                     <input type="text" class="form-control" name="nombre" value="{{$universidad->nombre}}">
+                     <input type="text" class="form-control" name="nombre" value="{{$universidad->nombre}}" required>
                </div>
             </div>
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="form-group col-md-4">
                      <label for="Provincia">Provincia:</label>
-                     <input type="text" class="form-control" name="provincia" value="{{$universidad->provincia}}">
+                     <input type="text" class="form-control" name="provincia" value="{{$universidad->provincia}}" required>
                </div>
             </div>
             <div class="row">
                <div class="col-md-4"></div>
                <div class="form-group col-md-4">
                      <label for="Ciudad">Ciudad:</label>
-                     <input type="text" class="form-control" name="ciudad" value="{{$universidad->ciudad}}">
+                     <input type="text" class="form-control" name="ciudad" value="{{$universidad->ciudad}}" required>
                 </div>
                 </div>
             <div class="row">
                  <div class="col-md-4"></div>
                  <div class="form-group col-md-4">
                      <label for="Direccion">Direccion:</label>
-                     <input type="text" class="form-control" name="direccion" value="{{$universidad->direccion}}">
+                     <input type="text" class="form-control" name="direccion" value="{{$universidad->direccion}}" required>
                  </div>
             </div>
             <div class="row">
                  <div class="col-md-4"></div>
                  <div class="form-group col-md-4">
                       <label for="Telefono">Telefono:</label>
-                      <input type="text" class="form-control" name="telefono" value="{{$universidad->telefono}}">
+                      <input type="text" class="form-control" name="telefono" value="{{$universidad->telefono}}" required>
                  </div>
             </div>
             <div class="row">
                  <div class="col-md-4"></div>
                  <div class="form-group col-md-4">
                      <label for="Web">Web:</label>
-                     <input type="text" class="form-control" name="web" value="{{$universidad->web}}">
+                     <input type="text" class="form-control" name="web" value="{{$universidad->web}}" required>
                   </div>
             </div>
             <div class="row">

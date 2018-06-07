@@ -14,6 +14,7 @@
         <p>{{ \Session::get('success') }}</p>
       </div><br />
      @endif
+
     <table class="table table-striped">
     <thead>
       <tr>
