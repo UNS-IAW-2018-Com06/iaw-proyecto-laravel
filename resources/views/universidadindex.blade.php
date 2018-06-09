@@ -31,28 +31,22 @@
       </tr>
     </thead>
     <tbody> 
-      @foreach($universidades as $universidad)
-      <tr>
-        <td>{{$universidad['nombre']}}</td>
-        <td>{{$universidad->provincia}}</td>
-        <td>{{$universidad->ciudad}}</td>
-        <td>{{$universidad->direccion}}</td>
-        <td>{{$universidad->telefono}}</td>
-        <td>{{$universidad->web}}</td>         
-        <td>{{$universidad->coordenadas[0]}}</td>      
-        <td>{{$universidad->coordenadas[1]}}</td> 
-        <td>count({{$universidad['carreras_grado']}})</td> 
+      @foreach($uni as $universidad)
+        {{$universidad->nombre}}<br>
+        {{$universidad->ciudad}}<br>
+        {{$universidad->provincia}}<br>
+        {{$universidad->dirección}}<br>
+        @foreach($universidad->coordenadas as $coord)
+           {{$coord}}<br>
 
-        
-        <td><a href="{{action('UniversidadController@edit', $universidad->id)}}" class="btn btn-warning">Edit</a></td>
-        <td>
-          <form action="{{action('UniversidadController@destroy', $universidad->id)}}" method="post">
-            @csrf
-            <input name="_method" type="hidden" value="DELETE">
-            <button class="btn btn-danger" type="submit">Delete</button>
-          </form>
-        </td>
-      </tr>
+        @endforeach
+
+        @if(!empty($universidad->carreras_grado))
+            @foreach($universidad->carreras_grado as $c)
+              {{$c->nombre_carrera}}<br>
+
+            @endforeach
+        @endif
       @endforeach
       </tbody>
     </table>

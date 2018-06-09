@@ -33,7 +33,8 @@ class UniversidadController extends Controller{
     public function index()
     {
         $universidades=Universidad::all();
-        return view('universidadindex',compact('universidades'));
+        $uni = json_decode($universidades); 
+        return view('universidadindex',compact('uni'));
     }
 
     public function edit($id)
