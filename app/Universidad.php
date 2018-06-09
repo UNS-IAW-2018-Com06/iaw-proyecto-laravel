@@ -11,6 +11,6 @@ class Universidad extends Eloquent{
     protected $collection = 'universidades';
     
     protected $fillable = [
-        'nombre', 'provincia','ciudad','direccion','telefono','web'
+        'nombre', 'provincia','ciudad','direccion','telefono','web', 'coordenadas', 'carreras_grado' 
     ];
 }

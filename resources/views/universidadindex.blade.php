@@ -24,18 +24,26 @@
         <th>Direccion</th>
         <th>Telefono</th>
         <th>Web</th>
+        <th>Latitud</th>
+        <th>Longitud</th>
+        <th>Carreras de Grado</th>
         <th colspan="2">Action</th>
       </tr>
     </thead>
     <tbody> 
       @foreach($universidades as $universidad)
       <tr>
-        <td>{{$universidad->nombre}}</td>
+        <td>{{$universidad['nombre']}}</td>
         <td>{{$universidad->provincia}}</td>
         <td>{{$universidad->ciudad}}</td>
         <td>{{$universidad->direccion}}</td>
         <td>{{$universidad->telefono}}</td>
-        <td>{{$universidad->web}}</td>        
+        <td>{{$universidad->web}}</td>         
+        <td>{{$universidad->coordenadas[0]}}</td>      
+        <td>{{$universidad->coordenadas[1]}}</td> 
+        <td>count({{$universidad['carreras_grado']}})</td> 
+
+        
         <td><a href="{{action('UniversidadController@edit', $universidad->id)}}" class="btn btn-warning">Edit</a></td>
         <td>
           <form action="{{action('UniversidadController@destroy', $universidad->id)}}" method="post">

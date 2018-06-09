@@ -11,7 +11,7 @@
 
   <body>
     <div class="container">
-        <h2>Laravel MongoDB CRUD Tutorial With Example</h2><br/>
+        <h2>Agregar nueva Universidad</h2><br/>
         <div class="container">
         </div>
         <form method="post" id="formEdit" action="{{url('add')}}">
@@ -58,6 +58,21 @@
                 <input type="text" class="form-control" name="web" required>
             </div>
             </div>
+            <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+                <label for="Latitud">Latitud:</label>
+                <input type="text" class="form-control" name="coordenadas[0]" required>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+                <label for="Longitud">Longitud:</label>
+                <input type="text" class="form-control" name="coordenadas[1]" required>
+            </div>
+            </div>
+
             <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">

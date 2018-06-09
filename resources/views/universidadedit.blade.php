@@ -11,7 +11,7 @@
 
   <body>
     <div class="container">
-        <h2>Edit A Form</h2><br/>
+        <h2>Modificacion de datos</h2><br/>
         <div class="container"> </div>
         <form method="post" id="formEdit" action="{{action('UniversidadController@update', $id)}}">
             @csrf
@@ -55,6 +55,20 @@
                  <div class="form-group col-md-4">
                      <label for="Web">Web:</label>
                      <input type="text" class="form-control" name="web" value="{{$universidad->web}}" required>
+                  </div>
+            </div>
+            <div class="row">
+                 <div class="col-md-4"></div>
+                 <div class="form-group col-md-4">
+                     <label for="Latitud">Latitud:</label>
+                     <input type="text" class="form-control" name="coordenadas[0]" value="{{$universidad->coordenadas[0]}}" required>
+                  </div>
+            </div>
+            <div class="row">
+                 <div class="col-md-4"></div>
+                 <div class="form-group col-md-4">
+                     <label for="Longitud">Longitud:</label>
+                     <input type="text" class="form-control" name="coordenadas[1]" value="{{$universidad->coordenadas[1]}}" required>
                   </div>
             </div>
             <div class="row">
