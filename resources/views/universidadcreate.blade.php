@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Laravel MongoDB CRUD Tutorial With Example</title>
+    <title> Creacion</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">  
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>  
@@ -61,15 +61,15 @@
             <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
-                <label for="Latitud">Latitud:</label>
-                <input type="text" class="form-control" name="coordenadas[0]" required>
+                <label for="coordenadas[0]"> Latitud:</label>
+                <input class="form-control" name="coordenadas[0]" index: '2dsphere' type: 'GeoJSON' required>
             </div>
             </div>
             <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
-                <label for="Longitud">Longitud:</label>
-                <input type="text" class="form-control" name="coordenadas[1]" required>
+                <label for="coordenadas[1]">Longitud:</label>
+                <input class="form-control" name="coordenadas[1]" index: '2dsphere' type: 'GeoJSON'  required>
             </div>
             </div>
 

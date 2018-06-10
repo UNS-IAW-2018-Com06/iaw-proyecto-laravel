@@ -22,7 +22,7 @@ class UniversidadController extends Controller{
         $universidad->nombre = $request->get('nombre');
         $universidad->provincia = $request->get('provincia');
         $universidad->ciudad = $request->get('ciudad');        
-        $universidad->direccion = $request->get('direccion');        
+        $universidad->dirección = $request->get('direccion');        
         $universidad->telefono = $request->get('telefono');    
         $universidad->web = $request->get('web');         
         $universidad->coordenadas = [ $request->get('coordenadas[0]'),  $request->get('coordenadas[1]') ];
@@ -49,7 +49,7 @@ class UniversidadController extends Controller{
         $universidad->nombre = $request->get('nombre');
         $universidad->provincia = $request->get('provincia');
         $universidad->ciudad = $request->get('ciudad');        
-        $universidad->direccion = $request->get('direccion');        
+        $universidad->dirección = $request->get('direccion');        
         $universidad->telefono = $request->get('telefono');    
         $universidad->web = $request->get('web');            
         $universidad->coordenadas = [ $request->get('coordenadas[0]'),  $request->get('coordenadas[1]') ];
