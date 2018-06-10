@@ -20,7 +20,7 @@
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
                 <label for="Nombre">Nombre:</label>
-                <input type="text" class="form-control" name="nombre" required>
+                <input type="text" class="form-control" name="nombre" required autofocus>
             </div>
             </div>
             <div class="row">
@@ -61,15 +61,15 @@
             <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
-                <label for="coordenadas[0]"> Latitud:</label>
-                <input class="form-control" name="coordenadas[0]" index: '2dsphere' type: 'GeoJSON' required>
+                <label for="Latitud"> Latitud:</label>
+                <input type: "Number" class="form-control" name="coordenadas[0]" value=0  required>
             </div>
             </div>
             <div class="row">
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
-                <label for="coordenadas[1]">Longitud:</label>
-                <input class="form-control" name="coordenadas[1]" index: '2dsphere' type: 'GeoJSON'  required>
+                <label for="Longitud">Longitud:</label>
+                <input  type: "Number" class="form-control" name="coordenadas[1]" value=0  required>
             </div>
             </div>
 

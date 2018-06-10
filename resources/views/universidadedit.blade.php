@@ -19,7 +19,7 @@
                 <div class="col-md-4"></div>
                 <div class="form-group col-md-4">
                      <label for="Nombre">Nombre:</label>
-                     <input type="text" class="form-control" name="nombre" value="{{$universidad->nombre}}" required>
+                     <input type="text" class="form-control" name="nombre" value="{{$universidad->nombre}}" autofocus required>
                </div>
             </div>
             <div class="row">
@@ -40,7 +40,7 @@
                  <div class="col-md-4"></div>
                  <div class="form-group col-md-4">
                      <label for="Direccion">Direccion:</label>
-                     <input type="text" class="form-control" name="direccion" value="{{$universidad->direccion}}" required>
+                     <input type="text" class="form-control" name="direccion" value="{{$universidad->dirección}}" required>
                  </div>
             </div>
             <div class="row">
@@ -61,14 +61,14 @@
                  <div class="col-md-4"></div>
                  <div class="form-group col-md-4">
                      <label for="Latitud">Latitud:</label>
-                     <input type="text" class="form-control" name="coordenadas[0]" value="{{$universidad->coordenadas[0]}}" required>
+                     <input type: "GeoJSON" class="form-control" name="coordenadas[0]" value="{{$universidad->coordenadas[0]}}" required>
                   </div>
             </div>
             <div class="row">
                  <div class="col-md-4"></div>
                  <div class="form-group col-md-4">
                      <label for="Longitud">Longitud:</label>
-                     <input type="text" class="form-control" name="coordenadas[1]" value="{{$universidad->coordenadas[1]}}" required>
+                     <input type: "GeoJSON" class="form-control" name="coordenadas[1]" value="{{$universidad->coordenadas[1]}}" required>
                   </div>
             </div>
             <div class="row">
