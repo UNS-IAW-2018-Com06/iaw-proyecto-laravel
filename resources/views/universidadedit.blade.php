@@ -16,43 +16,43 @@
                 {{csrf_field() }}
                 <div class="form-group">
                     <label for="Nombre">Nombre:</label>
-                    <input type="text" class="form-control" name="nombre" required autofocus>
+                    <input type="text" class="form-control" name="nombre" value="{{$universidad->nombre}}" required autofocus>
                 </div>
                 <h4>Ubicación</h4>
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="Provincia">Provincia:</label>
-                        <input type="text" class="form-control" name="provincia" required>
+                        <input type="text" class="form-control" name="provincia" value="{{$universidad->provincia}}" required>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="Ciudad">Ciudad:</label>
-                        <input type="text" class="form-control" name="ciudad" required>
+                        <input type="text" class="form-control" name="ciudad" value="{{$universidad->ciudad}}" required>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="Direccion">Direccion:</label>
-                        <input type="text" class="form-control" name="direccion" required>
+                        <input type="text" class="form-control" name="direccion" value="{{$universidad->dirección}}" required>
                     </div>
                 </div>
                 <h4>Contacto</h4>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="Telefono">Telefono:</label>
-                        <input type="text" class="form-control" name="telefono" required>
+                        <input type="text" class="form-control" name="telefono" value="{{$universidad->telefono}}" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="Web">Web:</label>
-                        <input type="text" class="form-control" name="web" required>
+                        <input type="text" class="form-control" name="web" value="{{$universidad->web}}" required>
                     </div>
                 </div>
                 <h4>Localización Geográfica</h4>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="Latitud"> Latitud:</label>
-                        <input type="Number" class="form-control" name="coordenadas0" required>
+                        <input type="Number" class="form-control" name="coordenadas0" value="{{$universidad->coordenadas[0]}}" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="Longitud">Longitud:</label>
-                        <input  type= "Number" class="form-control" name="coordenadas1" required>
+                        <input  type= "Number" class="form-control" name="coordenadas1" value="{{$universidad->coordenadas[1]}}" required>
                     </div>
                 </div>
                 <div class="form-group ">
