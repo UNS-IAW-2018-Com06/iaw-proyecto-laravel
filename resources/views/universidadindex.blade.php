@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Editar Universidad')
+@section('title', 'Administración UniMapoteca')
 
 @section('content')
     <div class="container">
