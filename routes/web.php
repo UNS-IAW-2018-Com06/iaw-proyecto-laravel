@@ -10,19 +10,20 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function(){
+    return redirect('/universidad');
 });
 
 
-Route::get('add','UniversidadController@create');
-Route::post('add','UniversidadController@store');
+Route::get('/add','UniversidadController@create');
+Route::post('/add','UniversidadController@store');
 
-Route::get('universidad','UniversidadController@index');
+Route::get('/universidad','UniversidadController@index');
 
-Route::get('edit/{id}','UniversidadController@edit');
-Route::post('edit/{id}','UniversidadController@update');
+Route::get('/edit/{id}','UniversidadController@edit');
+Route::post('/edit/{id}','UniversidadController@update');
 
 Route::delete('{id}','UniversidadController@destroy');
+
 
 Auth::routes();
