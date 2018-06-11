@@ -2,6 +2,10 @@
 
 @section('title', 'Crear Universidad')
 
+@section('scripts')
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>  
+@endsection
+
 @section('content')
 
 <body>
@@ -65,24 +69,19 @@
     <script>
         var i = 0;
         $('#addUni').click(function(){
-            $('#formEdit').find('button[id="addUni"]').before('<h4>Carrera</h4>'+
-                                                                '<div class="form-row">'+
+            $('#formEdit').find('button[id="addUni"]').before('<div class="form-row">'+
                                                                     '<div class="form-group col-md-6">'+
                                                                         '<label for="nombre">Nombre:</label>'+
-                                                                        '<input type="text" class="form-control" name="nombreCarrera[]" required>'+
+                                                                        '<input type="text" class="form-control" name="nombre_carrera['+i+']" required>'+
                                                                     '</div>'+
                                                                     '<div class="form-group col-md-6">'+
                                                                         '<label for="duracion">Duracion:</label>'+
-                                                                        '<input type="text" class="form-control" name="duracion" required>'+
+                                                                        '<input type="text" class="form-control" name="duración['+i+']" required>'+
                                                                     '</div>'+
                                                                 '</div>');
+            i++;
+                                    
         });
     </script>
 @endsection
 
-@section('scripts')
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">  
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>  
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-@endsection

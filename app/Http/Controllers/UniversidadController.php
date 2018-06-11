@@ -26,6 +26,17 @@ class UniversidadController extends Controller{
         $universidad->telefono = $request->get('telefono');    
         $universidad->web = $request->get('web');         
         $universidad->coordenadas = [ doubleval($request->get('coordenadas0')),  doubleval($request->get('coordenadas1')) ];
+        
+        $carreras = [];
+
+        for($i=0; $i<count($request->get('nombre_carrera')); $i++){
+            $carreras[]  = [
+                'nombre_carrera' => $request->get('nombre_carrera')[$i],
+                'duración' => $request->get('duración')[$i]
+            ];
+        }
+        
+        $universidad->carreras_grado = $carreras;
         $universidad->save();
         return redirect('universidad')->with('success', 'Universidad agregada');
     }
@@ -39,7 +50,8 @@ class UniversidadController extends Controller{
 
     public function edit($id)
     {
-        $universidad = Universidad::find($id);
+        $uni = Universidad::find($id);
+        $universidad = json_decode($uni); 
         return view('universidadedit',compact('universidad','id'));
     }
 
@@ -53,10 +65,19 @@ class UniversidadController extends Controller{
         $universidad->telefono = $request->get('telefono');    
         $universidad->web = $request->get('web');            
         $universidad->coordenadas = [ doubleval($request->get('coordenadas0')),  doubleval($request->get('coordenadas1')) ];
-        $universidad->save();
 
-        echo $request->get('nombreCarrera[]');
-        echo "HOLLALALALLSDKALSDKASD";
+       
+        $carreras = [];
+
+        for($i=0; $i<count($request->get('nombre_carrera')); $i++){
+            $carreras[]  = [
+                'nombre_carrera' => $request->get('nombre_carrera')[$i],
+                'duración' => $request->get('duración')[$i]
+            ];
+        }
+        
+        $universidad->carreras_grado = $carreras;
+        $universidad->save();
         return redirect('universidad')->with('success', 'Universidad actualizada');
     }
 
