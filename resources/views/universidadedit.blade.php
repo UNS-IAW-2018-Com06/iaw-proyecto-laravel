@@ -59,7 +59,7 @@
                     <button id="addUni" type="button" class="btn btn-success">Agregar Carrera</button>
                 </div>
                 <div class="form-group ">
-                    <button type="submit" class="btn btn-success" >Crear Universidad</button>
+                    <button type="submit" class="btn btn-success" >Actualizar Universidad</button>
                 </div>
                 <div>
                     <input class="btn btn-primary" type="button" value="Volver" onclick="history.back()">
@@ -74,7 +74,7 @@
                                                                 '<div class="form-row">'+
                                                                     '<div class="form-group col-md-6">'+
                                                                         '<label for="nombre">Nombre:</label>'+
-                                                                        '<input type="text" class="form-control" name="nombre" required>'+
+                                                                        '<input type="text" class="form-control" name="nombreCarrera" required>'+
                                                                     '</div>'+
                                                                     '<div class="form-group col-md-6">'+
                                                                         '<label for="duracion">Duracion:</label>'+

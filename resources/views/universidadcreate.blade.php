@@ -67,16 +67,15 @@
                 </div>
             </form>
     </div>
-</body>
 
-  <script>
+    <script>
         var i = 0;
         $('#addUni').click(function(){
             $('#formEdit').find('button[id="addUni"]').before('<h4>Carrera</h4>'+
                                                                 '<div class="form-row">'+
                                                                     '<div class="form-group col-md-6">'+
                                                                         '<label for="nombre">Nombre:</label>'+
-                                                                        '<input type="text" class="form-control" name="nombre" required>'+
+                                                                        '<input type="text" class="form-control" name="nombreCarrera[]" required>'+
                                                                     '</div>'+
                                                                     '<div class="form-group col-md-6">'+
                                                                         '<label for="duracion">Duracion:</label>'+
@@ -85,4 +84,5 @@
                                                                 '</div>');
         });
     </script>
+</body>
 </html>

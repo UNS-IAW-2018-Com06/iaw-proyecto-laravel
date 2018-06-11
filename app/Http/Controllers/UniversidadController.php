@@ -54,6 +54,9 @@ class UniversidadController extends Controller{
         $universidad->web = $request->get('web');            
         $universidad->coordenadas = [ doubleval($request->get('coordenadas0')),  doubleval($request->get('coordenadas1')) ];
         $universidad->save();
+
+        echo $request->get('nombreCarrera[]');
+        echo "HOLLALALALLSDKALSDKASD";
         return redirect('universidad')->with('success', 'Universidad actualizada');
     }
 
