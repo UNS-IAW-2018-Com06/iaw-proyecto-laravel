@@ -25,7 +25,7 @@ class UniversidadController extends Controller{
         $universidad->dirección = $request->get('direccion');        
         $universidad->telefono = $request->get('telefono');    
         $universidad->web = $request->get('web');         
-        $universidad->coordenadas = [ $request->get('coordenadas[0]'),  $request->get('coordenadas[1]') ];
+        $universidad->coordenadas = [ doubleval($request->get('coordenadas0')),  doubleval($request->get('coordenadas1')) ];
         $universidad->save();
         return redirect('universidad')->with('success', 'Universidad agregada');
     }
@@ -52,7 +52,7 @@ class UniversidadController extends Controller{
         $universidad->dirección = $request->get('direccion');        
         $universidad->telefono = $request->get('telefono');    
         $universidad->web = $request->get('web');            
-        $universidad->coordenadas = [ $request->get('coordenadas[0]'),  $request->get('coordenadas[1]') ];
+        $universidad->coordenadas = [ doubleval($request->get('coordenadas0')),  doubleval($request->get('coordenadas1')) ];
         $universidad->save();
         return redirect('universidad')->with('success', 'Universidad actualizada');
     }
