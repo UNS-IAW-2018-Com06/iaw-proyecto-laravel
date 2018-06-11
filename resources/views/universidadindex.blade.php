@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Editar Universidad')
+
 @section('content')
     <div class="container">
     <br />

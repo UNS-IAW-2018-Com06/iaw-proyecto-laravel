@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Crear Universidad')
+
 @section('content')
 
 <body>
